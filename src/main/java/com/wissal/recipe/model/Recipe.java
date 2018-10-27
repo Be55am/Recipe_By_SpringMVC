@@ -5,7 +5,6 @@ import lombok.EqualsAndHashCode;
 
 import javax.persistence.*;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 @Data
 @Entity
@@ -19,7 +18,7 @@ public class Recipe {
     private String description;
     private Integer prepTime;
     private Integer cookTime;
-    private String servings;
+    private Integer servings;
     private String source;
     private String url;
     @Lob

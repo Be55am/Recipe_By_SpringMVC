@@ -18,17 +18,20 @@ public class Ingredient {
 
 
     @OneToOne(fetch = FetchType.EAGER) //its eager by default but any way it loads this object when it load the ingrediant
-    private UnitOfMeasure uof;
+    private UnitOfMeasure uom;
 
     @ManyToOne
     private  Recipe recipe;
 
 
-    public Ingredient(String description, BigDecimal amount, UnitOfMeasure uof) {
+    public Ingredient(String description, BigDecimal amount, UnitOfMeasure uom) {
         this.description = description;
         this.amount = amount;
-        this.uof = uof;
+        this.uom = uom;
     }
 
 
+    public Ingredient() {
+
+    }
 }
